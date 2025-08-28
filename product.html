@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details – Tech Accessoires DZ</title>
+    <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <script defer src="products.js"></script>
+    <script defer src="product.js"></script>
+
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/corex-logo.png" alt="CoreX Logo" class="logo-icon">
+                <h2> CoreX</h2>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product-landing">
+        <!-- Product Images -->
+        <div class="product-image">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper" id="product-slides">
+                    <!-- Images injected by product.js -->
+                </div>
+                <!-- Swiper Navigation -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-details">
+            <h2 id="product-name">Product Name</h2>
+            <p><span id="new-price">0 DA</span> <span id="old-price" class="old-price">0 DA</span></p>
+            <p id="stock" class="stock">Stock: 0</p>
+
+            <ul id="product-features"></ul>
+
+            <!-- Order Form -->
+            <form class="order-form" id="orderForm">
+                <label for="color">Color:</label>
+                <select id="color" name="color">
+          <option value="">Select color</option>
+          <option value="Black">Black</option>
+          <option value="White">White</option>
+        </select>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" />
+
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required />
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required />
+
+                <label for="deliveryMethod">Delivery Method:</label>
+                <select id="deliveryMethod" name="deliveryMethod" required>
+          <option value="">Select delivery method</option>
+          <option value="domicile">À domicile</option>
+          <option value="bureau">Bureau</option>
+        </select>
+
+                <!-- Wilaya select (hidden until domicile is chosen) -->
+                <div id="wilaya-wrapper" style="display:none;">
+                    <label for="wilaya">Wilaya:</label>
+                    <select id="wilaya" name="wilaya">
+            <option value="">Select Wilaya</option>
+                <option value="Adrar">Adrar</option>
+    <option value="Chlef">Chlef</option>
+    <option value="Laghouat">Laghouat</option>
+    <option value="Oum El Bouaghi">Oum El Bouaghi</option>
+    <option value="Batna">Batna</option>
+    <option value="Béjaïa">Béjaïa</option>
+    <option value="Biskra">Biskra</option>
+    <option value="Béchar">Béchar</option>
+    <option value="Blida">Blida</option>
+    <option value="Bouira">Bouira</option>
+    <option value="Tamanrasset">Tamanrasset</option>
+    <option value="Tébessa">Tébessa</option>
+    <option value="Tlemcen">Tlemcen</option>
+    <option value="Tiaret">Tiaret</option>
+    <option value="Tizi Ouzou">Tizi Ouzou</option>
+    <option value="Alger">Alger</option>
+    <option value="Djelfa">Djelfa</option>
+    <option value="Jijel">Jijel</option>
+    <option value="Sétif">Sétif</option>
+    <option value="Saïda">Saïda</option>
+    <option value="Skikda">Skikda</option>
+    <option value="Sidi Bel Abbès">Sidi Bel Abbès</option>
+    <option value="Annaba">Annaba</option>
+    <option value="Guelma">Guelma</option>
+    <option value="Constantine">Constantine</option>
+    <option value="Médéa">Médéa</option>
+    <option value="Mostaganem">Mostaganem</option>
+    <option value="M’Sila">M’Sila</option>
+    <option value="Mascara">Mascara</option>
+    <option value="Ouargla">Ouargla</option>
+    <option value="Oran">Oran</option>
+    <option value="El Bayadh">El Bayadh</option>
+    <option value="Illizi">Illizi</option>
+    <option value="Bordj Bou Arréridj">Bordj Bou Arréridj</option>
+    <option value="Boumerdès">Boumerdès</option>
+    <option value="El Tarf">El Tarf</option>
+    <option value="Tindouf">Tindouf</option>
+    <option value="Tissemsilt">Tissemsilt</option>
+    <option value="El Oued">El Oued</option>
+    <option value="Khenchela">Khenchela</option>
+    <option value="Souk Ahras">Souk Ahras</option>
+    <option value="Tipaza">Tipaza</option>
+    <option value="Mila">Mila</option>
+    <option value="Aïn Defla">Aïn Defla</option>
+    <option value="Naâma">Naâma</option>
+    <option value="Aïn Témouchent">Aïn Témouchent</option>
+    <option value="Ghardaïa">Ghardaïa</option>
+    <option value="Relizane">Relizane</option>
+    <option value="El M'Ghair">El M'Ghair</option>
+    <option value="El Meniaa">El Meniaa</option>
+    <option value="Ouled Djellal">Ouled Djellal</option>
+    <option value="Bordj Baji Mokhtar">Bordj Baji Mokhtar</option>
+    <option value="Béni Abbès">Béni Abbès</option>
+    <option value="Timimoun">Timimoun</option>
+    <option value="Touggourt">Touggourt</option>
+    <option value="Djanet">Djanet</option>
+    <option value="In Salah">In Salah</option>
+    <option value="In Guezzam">In Guezzam</option>
+          </select>
+                </div>
+
+                <label for="address">Delivery Address:</label>
+                <input type="text" id="address" name="address" required />
+
+                <p class="total"><strong>Total:</strong> <span id="total-price">0.00 DA</span></p>
+
+                <button type="submit" class="buy-button">Buy Now – Cash on Delivery</button>
+            </form>
+        </div>
+    </main>
+    <main class="product-page">
+        <!-- Product Images -->
+        <div class="product-gallery">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper" id="product-slides">
+                    <!-- Images injected by product.js -->
+                </div>
+                <!-- Swiper Navigation -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 coreX – All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

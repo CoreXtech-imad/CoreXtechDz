@@ -1,0 +1,226 @@
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #0f1116;
+    color: #eaeaea;
+    line-height: 1.6;
+}
+
+
+/* Navbar */
+
+nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(22, 24, 31, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* Logo */
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+}
+
+nav h2 {
+    font-size: 1.3rem;
+    color: #4da6ff;
+}
+
+
+/* Center Nav Links */
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #4da6ff;
+}
+
+
+/* Shop Page Title */
+
+.shop-page h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+    color: #4da6ff;
+}
+
+
+/* Controls */
+
+.shop-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.shop-controls input,
+.shop-controls select {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #1c1f29;
+    color: #eee;
+}
+
+.shop-controls input::placeholder {
+    color: #aaa;
+}
+
+
+/* Product Grid */
+
+
+/* ===== Shop Container ===== */
+
+.shop-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    /* keeps it centered */
+    margin: auto;
+}
+
+
+/* Product Card */
+
+.product-card {
+    background: #16181f;
+    padding: 1rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(77, 166, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 280px;
+    /* keeps consistent size */
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px rgba(77, 166, 255, 0.25);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.product-card p {
+    color: #4da6ff;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+
+/* CTA Button inside product */
+
+.product-card a {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #4da6ff, #8a4dff);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.2s, background 0.3s;
+    animation: pulseGlow 2s infinite;
+}
+
+.product-card a:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #5bb8ff, #9b63ff);
+}
+
+
+/* Arrow inside button */
+
+.product-card a .arrow {
+    display: inline-block;
+    margin-left: 6px;
+    animation: bounceArrow 1s infinite;
+}
+
+@keyframes bounceArrow {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+
+/* Neon Glow Effect */
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(77, 166, 255, 0.7), 0 0 20px rgba(138, 77, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(77, 166, 255, 0.9), 0 0 40px rgba(138, 77, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(77, 166, 255, 0.7), 0 0 20px rgba(138, 77, 255, 0.5);
+    }
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    background: #16181f;
+    border-top: 1px solid #222;
+    color: #aaa;
+}
