@@ -13,9 +13,9 @@ const products = {
             "Lightweight Design"
         ],
         images: [
-            "/Hoco-L15-i.jpg",
-            "/L15-i.jpg",
-            "/L15-i-p.jpg"
+            "Hoco-L15-i.jpg",
+            "L15-i.jpg",
+            "L15-i-p.jpg"
         ]
     },
     "EQ2": {
@@ -31,8 +31,8 @@ const products = {
             "Compact Charger Case"
         ],
         images: [
-            "/eq2-b1.jpg",
-            "/eq2-b2.jpg",
+            "eq2-b1.jpg",
+            "eq2-b2.jpg",
 
         ]
     },
@@ -49,9 +49,9 @@ const products = {
             "Compact Charger Case"
         ],
         images: [
-            "/m105.jpg",
-            "/m105-1.jpg",
-            "/m105-2.jpg"
+            "m105.jpg",
+            "m105-1.jpg",
+            "m105-2.jpg"
         ]
     },
     "J201A": {
@@ -73,4 +73,5 @@ const products = {
         ]
     }
     // Add more as needed...
+
 };
